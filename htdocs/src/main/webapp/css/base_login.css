@@ -1,0 +1,339 @@
+html{color:#444444;background:#fff;}
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,fieldset,lengend,button,input,textarea,form,th,td,div{margin:0;padding:0;}
+body,button,input,select,textarea{font:12px Tahoma,Helvetica,Arial,"\5b8b\4f53",sans-serif; line-height:1;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+address,cite,dfn,em,var{font-style:normal;}
+code,kbd,pre,samp,tt{font-family:"Courier New",Courier,monospace;}
+small{font-size:12px;}
+ul,ol{list-style:none;}
+a{text-decoration:none; line-height:1.04; color: #666666;}
+a:hover{text-decoration:underline;}
+abbr[title],acronym[title]{border-bottom:1px dotted;cursor:help;}
+q:before,q:after{content:'';}
+legend{color:#666666;}
+:focus{outline:0;}
+fieldset,img{border:none;}
+button,input,select,textarea{font-size:100%;}
+table{border-collapse:collapse;border-spacing:0;}
+img{ -ms-interpolation-mode: bicubic}
+::-ms-clear { display: none;}
+::-ms-reveal { display: none;}
+html,body {width:100%;height:100%;}
+/*-------------end reset------------*/
+body {font-family: "Simsun";}
+.login_header .header_left, .login_header .header_right, .cell_input, .login_frame .btn_user_login, .login_frame .btn_user_login span, .login_frame .sms_btn, .login_frame .sent_btn, .login_frame .user_name_tips .tips_con a.jump_btn, .btn_fcm_submit, .btn_fcm_submit span, .login_frame .safeCodeList .cell_input input, .login_frame .code2 .setup_code2d, .login_frame .code2 .code2d_tip_bg, .login_frame .code2 .code2d_link, .fcm_form .cell_input { background: url(./images/bg.png) no-repeat;}
+.nav a, input.username, input.password, input.checkCode, .login_frame .mobile_check_list li.tipsSuc, .login_frame .mobile_check_list li.tipsError, .app_sdo_login.mobile .form_tips.show_tips.error.qmark, .cell_input .clear_btn, .popup .close, .fcm_form .input_wrap .status, .form_tips.error, .form_tipList_tips.error, .login_frame .error_list span, .fcm_tips, .app_sdo_login.mobile_wait.bindMobile .step .count { background: url(./images/icon.png) no-repeat;}
+
+.app_sdo_login { position: relative; width: 433px; height: 336px; background: #ffffff; border: 1px #8e8e8e solid; border-top: none; border-bottom: none; text-align: center;}
+.app_sdo_login .tbody, .app_sdo_login .tbody .tr, .app_sdo_login .form_tips { display: none;}
+.app_sdo_login .tbody#tbody_btn .tr { display: block;}
+
+.disabled{ opacity: 0.35; filter:alpha(opacity=35);}
+
+.login_header { position: relative; width: 100%; height: 38px; border-bottom: 1px #bdc4cd solid;}
+.login_header .header_left, .login_header .header_right { display: block; position: absolute; width: 4px; height: 38px; background-color: #fbfbfb;}
+.login_header .header_left { left: -1px; top: 0; background-position: left top;}
+.login_header .header_right { right: -1px; _right: -2px; top: 0; background-position: -5px top;}
+.login_header .header_bg { display: block; width: 427px; height: 38px; margin: 0 3px; background: url(./images/header_bg.png) repeat-x; line-height: 38px; overflow: hidden;}
+.login_header .header_title { display: block; float: left; width: 110px; height: 21px; margin: 10px 0 0 10px; background: url(./images/logo.png) no-repeat; font-size: 16px; text-indent: -9999px;}
+.login_header .get_app_wrap { display: block; float: right; margin-right: 25px; color: #ffffff;}
+.login_header .get_app { color: #ffffff; line-height: 38px;}
+
+.nav { position: relative; height: 38px; background: #edeef0; border-top: 1px #cccccc solid; border-bottom: 1px #cccccc solid; border-top: none;}
+.nav li { position: relative; z-index: 10; float: left; width: 98px; height: 38px; padding: 0 4px; border-right: 1px #cccccc solid; border-left: 1px #f3f3f3 solid;}
+.nav li.first { border-left: none;}
+.nav li.last { border-right: none;}
+.nav li.back { z-index: 0; margin: 0; padding: 0; position: absolute; width: 107px; height: 38px; top: 1px; left: -2px; background: #ffffff;}
+.nav a { display: inline-block; padding-left: 18px; margin-top: 11px; font: 700 14px/18px "Microsoft Yahei"; color: #666666;}
+.nav a:hover { text-decoration: none;}
+.nav .cur a { color: #444444;}
+.nav .btn_index a { background-position: left -224px;}
+.nav .btn_index a.cur { background-position: left -296px;}
+.nav .btn_mobile a { background-position: left -242px;}
+.nav .btn_mobile a.cur { background-position: left -314px;}
+.nav .btn_code2d a { background-position: left -260px;}
+.nav .btn_code2d a.cur { background-position: left -332px;}
+.nav .btn_sms a { background-position: left -278px;}
+.nav .btn_sms a.cur { background-position: left -350px;}
+#tooltip { position:absolute; z-index:1000; width:auto; background:#eef3f6; border:#d3d7da solid 1px; text-align:left; padding:3px;}
+#tooltip p { margin:0;padding:0; color:#555555;font:12px verdana,arial,sans-serif;}
+
+.login_wrap { width: 100%; height: 297px; overflow: hidden;}
+.login_frame { position: relative; width: 255px; margin: 0 auto; padding: 10px 0 0 0;}
+.login_frame .login_form { height: auto !important; height: 178px; min-height: 178px;}
+.login_frame .form_tips_outer { display: block; width: auto; height: auto !important; height: 28px; min-height: 28px;}
+.login_frame .form_tips, .login_frame .form_tipList_tips { display: none; width: 243px; height: auto !important; height: 26px; min-height: 26px; line-height: 26px; background-color: #F5F2CE; border: 1px solid #DDC4AD; color: #997208; text-align: left; padding: 0 0 0 10px; text-align: left;}
+.login_frame .form_tips.show_tips { display: inline-block;}
+.login_frame .form_tips.error, .login_frame .form_tipList_tips.error { width: 223px; padding-left: 30px; background-position: 4px -368px;}
+.login_frame .form_tips a { line-height: 26px; text-decoration: underline;}
+.login_frame .user_name_tips { display: none; position: absolute; left: 50%; top: 75px; z-index: 20; width: 222px; height: 68px; margin-left: -90px;}
+.login_frame .user_name_tips .tips_arrow { position: absolute; left: 16px; top: -7px; width: 16px; height: 12px; overflow: hidden;}
+.login_frame .user_name_tips .tips_arrow span { display: block; height: 12px; font-size: 12px; line-height: 1.231; color: #e9e2da; overflow: hidden;}
+.login_frame .user_name_tips .tips_arrow span.inside { margin-top: -11px; color: #fdf8f4;}
+.login_frame .user_name_tips .tips_con { display: inline-block; padding: 4px 6px; background: #fdf8f4; border: 1px #e9e2da solid; line-height: 16px; text-align: left;}
+.login_frame .user_name_tips .tips_con .num { font-family: "Arail"; font-size: 13px; color: #2279d4;}
+.login_frame .user_name_tips .tips_con a { display: block; float: right; line-height: 20px; margin-top: 6px;}
+.login_frame .user_name_tips .tips_con a.jump_btn { float: right; width: 64px; height: 20px; background-position: -10px top; text-align: center; text-decoration: none;}
+.login_frame .login_table { margin: 0 auto;}
+.login_frame .login_table .tr { margin-bottom: 10px;}
+.login_frame .login_table #user_pwd, .login_frame .login_table #code { margin-bottom: 13px;}
+.login_frame .login_table #user_name { margin-bottom: 10px;}
+.login_frame .col_1 { width: 40px; text-align: right;}
+.input_label { padding-right: 6px; font-size: 14px; line-height: 18px; color: #333333;}
+.cell_input { position: relative; width: 255px; height: 43px; background-position: left -81px;}
+.cell_input.input_cur { background-position: right -81px;}
+.cell_input.width_clear_btn .clear_btn { display: block;}
+.cell_input .clear_btn { display: none; position:absolute; right: 0; top: 13px; width: 17px; height: 17px; background-position: left -186px; text-indent: -9999px;}
+.cell_input .cell_input_notice { position: absolute; top: 0; left: 12px; color: #B5B5B5; font-size: 14px; line-height: 43px; cursor: text;}
+.cell_input .cell_input_notice_hide { display: none;}
+.cell_input.for_textarea { background-position: left -290px; width: 309px; height: 137px;}
+input.text { position: absolute; top: 0; left: 0; width: 235px; height: 24px; padding: 10px; line-height: 25px; background-color: transparent; border: none; font: 700 16px/24px verdana;}
+input.username { background-position: 12px top;}
+input.password, input.checkCode { background-position: 12px -43px;}
+.with_icon input { width: 205px; padding-left: 35px}
+.with_icon input.username { width: 195px;}
+.no_icon input.username { background: none;}
+.with_icon .cell_input_notice { left: 37px;}
+.input_cur input.username { background-position: 12px -452px;}
+.input_cur input.password, .input_cur input.checkCode { background-position: 12px -497px;}
+.login_frame .autologin { float: left; height: 15px; line-height: 15px; overflow: hidden;}
+.login_frame .autologin .input_label { font-size: 12px; vertical-align: top;}
+.login_frame .autologin input { vertical-align: top; margin-top: 2px; *margin-top: -4px;}
+.login_frame .mobile_help { width: 230px; height: 22px; padding-left: 34px; margin-top: 20px; margin-left: 15px; font-size: 12px; line-height: 22px;}
+.login_frame .code2 .code2d_notice { position: relative; width: 100%; margin: 15px 0; line-height: 21px;}
+.login_frame .code2 .setup_code2d { display: inline-block; position: relative; width: 39px; height: 21px; margin: 0 5px; background-position: -10px top; line-height: 21px; color: #444444;}
+.login_frame .code2 .setup_code2d:hover { text-decoration: none;}
+.login_frame .code2 .code2d_tip { display: none; position: absolute; left: 42px; top: 22px; width: 189px; height: 36px;}
+.login_frame .code2 .code2d_tip_bg { position: absolute; left: 0; top: 0; width: 189px; height: 36px; background-position: -50px top; opacity: 0.7; filter:alpha(opacity=70);}
+.login_frame .code2 .code2d_link { display: block; position: absolute; left: 5px; top: 0; width: 189px; height: 36px; background-position: -240px top; text-indent: -9999px;}
+.login_frame .code2 img { padding: 18px; background: #f7f6f6; border: 1px #c9c9c9 solid;}
+.login_frame .sms_btn, .login_frame .sent_btn { display: none; position: absolute; right: 1px; top: 1px; width: 88px; height: 39px; background-position: left -215px; border: 1px #d8d8d8 solid; line-height: 41px; font-size: 13px; cursor: pointer; color: #666666; overflow: hidden;}
+.login_frame .sms_btn:hover, .login_frame .sent_btn:hover { text-decoration: none; background-position: -100px -215px;}
+.login_frame .sms_btn.disabled, .login_frame .sent_btn.disabled { background-position: -200px -215px; cursor: default;}
+.login_frame .mobile_error_help { float: left; display: inline-block; line-height: 18px; width: 60px;}
+.login_frame .mobile_help_btn { display: block; position: absolute; top: 6px; right: 6px; width: 16px; height: 10px; text-indent: -9999px;}
+.login_frame .errorList { display: none;}
+.login_frame .errorList span { display: none;}
+.login_frame .safeCodeList { width: 100%; overflow: hidden;}
+.login_frame .safeCodeList .cell_input { display: inline-block; width: 60px; height: 30px; padding-left: 3px; background-position: left -40px;}
+.login_frame .safeCodeList .cell_input input { background-position: -40px -40px;}
+.login_frame .safeCodeList li { display: inline; float: left; width: 75px; height: 58px; margin: 0 5px; line-height: 22px;}
+.login_frame .safeCodeList input.text { position: static; float: right; width: 60px; height: 30px; padding: 0; margin: 0 auto; text-align: center; line-height: 30px;}
+.login_frame .safeCodeList li.cur { background: #eef3f6;}
+.login_frame .safeCodeList li.cur .cell_input { background-position: -100px -40px;}
+.login_frame .safeCodeList li.cur input.text { background-position: -140px -40px;}
+.login_frame #ope { width: 100%; height: 15px; overflow: hidden; margin-bottom: 0;}
+.login_frame .safeCodeTips { font-size: 14px;}
+.login_frame .login_btn { height: 43px; padding-top: 15px; text-align: center;}
+.login_frame .cancel_btn, .login_frame .back_btn, .login_frame .setpass_link { display: none; float: right; padding-top: 15px;}
+.login_frame .cancel_btn a, .login_frame .setpass_link a { line-height: 43px; font-size: 14px;}
+.login_frame .back_btn a { display: block; width: 63px; height: 26px; background: url(./images/btn_back.png) no-repeat; text-indent: -9999px;}
+.login_frame a.btn_user_login, .btn_fcm_submit { display: block; padding-left: 80px; background-position: left -127px; height: 43px; font-size: 18px; line-height: 40px; color: #ffffff; cursor: pointer;}
+.login_frame .login_btn.disabled a.btn_user_login { cursor: default;}
+.login_frame a.btn_user_login span, .btn_fcm_submit span { display: none; height: 43px; padding-right: 80px; background-position: right -127px; font-family: "Microsoft Yahei"; cursor: pointer;}
+.login_frame .login_btn.disabled a.btn_user_login span { cursor: default;}
+.login_frame .login_btn.disabled a.btn_user_login:hover { background-position: left -127px;}
+.login_frame .login_btn.disabled a.btn_user_login:hover span { background-position: right -127px;}
+.login_frame a.btn_user_login span.btn_user_login_mobile { display: none;}
+.login_frame a.btn_user_login span.btn_user_login_mobile_back { display: none;}
+.login_frame a.btn_user_login:hover, .btn_fcm_submit:hover { text-decoration: none; background-position: left -171px;}
+.login_frame a.btn_user_login:hover span, .btn_fcm_submit:hover span { background-position: right -171px;}
+.reg_guide { position: absolute; left: 152px; bottom: 7px; line-height: 20px; font-size: 12px;}
+
+.footer { position: absolute; left: -1px; bottom: -4px; _bottom: -12px; width: 435px; height: 4px; background: url(./images/footer_bg.png) no-repeat;}
+
+/* 默认登录 */
+.app_sdo_login.index .tbody#tbody_user { display: block;}
+.app_sdo_login.index #user_name { display: block;}
+.app_sdo_login.index #user_pwd { display: block;}
+.app_sdo_login.index #ope { display: block;}
+.app_sdo_login.index .tbody#tbody_btn { display: block;}
+.app_sdo_login.index .tbody#tbody_btn .tr { display: block;}
+.app_sdo_login.index .login_frame a.btn_user_login span.btn_user_login_index { display: block; letter-spacing: 4px;}
+
+/* 手机一键登录 */
+.app_sdo_login.mobile .tbody#tbody_user { display: block;}
+.app_sdo_login.mobile .tbody#tbody_btn { display: block;}
+.app_sdo_login.mobile .tbody#tbody_btn .tr { display: block;}
+.app_sdo_login.mobile .form_tips.qmark { width: 185px; padding: 0 25px 0 10px; margin-left: 40px;}
+.app_sdo_login.mobile .form_tips.show_tips.error.qmark { position: relative; background-position: right -159px; }
+.app_sdo_login.mobile #user_name { display: block;}
+.app_sdo_login.mobile .login_frame { padding-top: 35px;}
+.app_sdo_login.mobile .login_frame .login_btn { margin-top: 35px;}
+.app_sdo_login.mobile .login_frame a.btn_user_login { padding-left: 40px;}
+.app_sdo_login.mobile .login_frame a.btn_user_login span { padding-right: 40px;}
+.app_sdo_login.mobile .login_frame a.btn_user_login span.btn_user_login_mobile { display: block;}
+.status_index, .status_suc, .status_notInstalled, .status_bindMobile { display: none;}
+.login_frame .form_tips.status_index { position: absolute; left: 52px; top: 20px; width: auto; padding: 0; border: none;}
+.login_frame .form_tips.status_index a { display: block; width: 137px; height: 28px; background: url(./images/mobile_index_tip.png) no-repeat; text-indent: -9999px;}
+.app_sdo_login.mobile_index #confirm_code { display: block;}
+.app_sdo_login.mobile_wait #confirm_code a { color: #4a90e6;}
+.app_sdo_login.mobile_wait.suc #confirm_code { display: block;}
+.app_sdo_login.mobile_wait.suc #confirm_code .status_suc { display: block; text-align: left;}
+.app_sdo_login.mobile_wait.suc .confirm_code_outer { font-size: 14px;}
+.app_sdo_login.mobile_wait.suc .confirm_code_outer span { font-family: Arial; font-size: 20px; font-weight: 700; color: #cf2c1c;}
+.app_sdo_login.mobile_wait.suc .login_frame .login_btn { display: none;}
+.app_sdo_login.mobile_wait.suc .login_frame .cancel_btn { display: inline-block;}
+.app_sdo_login.mobile_wait.suc .reg_guide { display: none;}
+.app_sdo_login.mobile_wait.notInstalled input.username { width: 156px;}
+.app_sdo_login.mobile_wait.notInstalled #confirm_code { display: block; line-height: 12px;}
+.app_sdo_login.mobile_wait.notInstalled #confirm_code .status_notInstalled { display: block; text-align: left;}
+.app_sdo_login.mobile_wait.notInstalled .login_frame #user_name_input .sent_btn { display: block; width: 76px;}
+.app_sdo_login.mobile_wait.notInstalled .login_frame .login_btn { display: none;}
+.app_sdo_login.mobile_wait.notInstalled .login_frame .back_btn { display: block;}
+.app_sdo_login.mobile_wait.notInstalled p { padding-bottom: 15px; color: #939393;}
+.app_sdo_login.mobile_wait.notInstalled .reg_guide { display: none;}
+.app_sdo_login.mobile_wait.notInstalled .cell_input.width_clear_btn .clear_btn { display: none;}
+.app_sdo_login.mobile_wait.bindMobile input.username { width: 156px;}
+.app_sdo_login.mobile_wait.bindMobile #confirm_code { display: block;}
+.app_sdo_login.mobile_wait.bindMobile #confirm_code .status_bindMobile { display: block; text-align: left;}
+.app_sdo_login.mobile_wait.bindMobile .login_frame #user_name_input .sent_btn { display: block; width: 76px;}
+.app_sdo_login.mobile_wait.bindMobile .login_frame .login_btn { display: none;}
+.app_sdo_login.mobile_wait.bindMobile .login_frame .back_btn { display: block;}
+.app_sdo_login.mobile_wait.bindMobile .step { width: 100%; position: relative; line-height: 12px; color: #939393; text-align: left;}
+.app_sdo_login.mobile_wait.bindMobile .step .count { display: block; position: absolute; width: 27px; height: 27px; text-indent: -9999px;}
+.app_sdo_login.mobile_wait.bindMobile .step p { padding-bottom: 15px;}
+.app_sdo_login.mobile_wait.bindMobile .step_1 a { padding-left: 18px;}
+.app_sdo_login.mobile_wait.bindMobile .step_1 .count { float: left; left: -35px; top: -43px; background-position: left -396px;}
+.app_sdo_login.mobile_wait.bindMobile .step_2 { font-size: 14px; line-height: 27px; color: #444444;}
+.app_sdo_login.mobile_wait.bindMobile .step_2 .count { left: -35px; top: 0; background-position: left -424px;}
+.app_sdo_login.mobile_wait.bindMobile .back_btn { margin-top: -18px;}
+.app_sdo_login.mobile_wait.bindMobile .reg_guide { display: none;}
+.app_sdo_login.mobile_wait.bindMobile .cell_input.width_clear_btn .clear_btn { display: none;}
+
+
+/* 二维码登录 */
+.app_sdo_login.code2d .tbody#tbody_code2 { display: block;}
+.app_sdo_login.code2d .login_frame .code2 { display: block;}
+.app_sdo_login.code2d .form_tips_outer { display: none;}
+
+/* 短信登录 */
+.app_sdo_login.sms .tbody#tbody_user { display: block;}
+.app_sdo_login.sms #user_name { display: block;}
+.app_sdo_login.sms #code { display: block;}
+.app_sdo_login.sms #ope { display: block;}
+.app_sdo_login.sms input.checkCode { width: 119px;}
+.app_sdo_login.sms .login_frame #code .sms_btn { display: block;}
+.app_sdo_login.sms .col_1 { width: 80px;}
+.app_sdo_login.sms .autologin { visibility: hidden;}
+.app_sdo_login.sms .tbody#tbody_btn { display: block;}
+.app_sdo_login.sms .tbody#tbody_btn .tr { display: block;}
+.app_sdo_login.sms .login_frame a.btn_user_login span.btn_user_login_index { display: block; letter-spacing: 4px;}
+
+/* 短信登录-设置密码 */
+.app_sdo_login.setpass .tbody#tbody_setpass { display: block;}
+.app_sdo_login.setpass #setpass_user_name { display: block; padding-top: 4px; line-height: 23px; text-align: left;}
+.app_sdo_login.setpass #setpass_user_name .input_label { font-size: 14px;}
+.app_sdo_login.setpass #setpass_set_pass { display: block;}
+.app_sdo_login.setpass #setpass_confirm_pass { display: block;}
+.app_sdo_login.setpass .form_tips_outer { position: absolute; top: 145px; left: 0; margin-left: 0; padding: 0px;}
+.app_sdo_login.setpass .autologin { visibility: hidden;}
+.app_sdo_login.setpass .forget_pwd_link { visibility: hidden;}
+.app_sdo_login.setpass .tbody#tbody_btn { display: block;}
+.app_sdo_login.setpass .tbody#tbody_btn .tr { display: block; margin-top: 14px;}
+.app_sdo_login.setpass .login_frame .setpass_link { display: block; float: right; width: 90px;}
+.app_sdo_login.setpass .login_frame .col_1 { width: 80px;}
+.app_sdo_login.setpass .login_frame .setpass_account { width: 220px; text-align: left; font-family: verdana; font-size: 16px; font-weight: bold; color: #fa6642;}
+.app_sdo_login.setpass .login_frame #login_btn .td { width: 255px; padding-left: 50px;}
+.app_sdo_login.setpass .login_frame .login_btn { float: left; width: 120px;}
+.app_sdo_login.setpass .login_frame a.btn_user_login { width: 100px; padding-left: 20px;}
+.app_sdo_login.setpass .login_frame a.btn_user_login span.btn_user_login_setpass { display: block; padding-right: 22px;}
+
+/* 图片验证码 */
+.app_sdo_login.checkcode .login_frame { margin-top: 21px;}
+.app_sdo_login.checkcode .nav { display: none;}
+.app_sdo_login.checkcode .tbody#tbody_checkcode { display: block;}
+.app_sdo_login.checkcode #checkcode_img { display: block; width: 100%; height: 55px; line-height: 54px; padding-top: 5px; overflow: hidden; text-align: left;}
+.app_sdo_login.checkcode #checkcode_input { display: block;}
+.app_sdo_login.checkcode td { text-align: right;}
+.app_sdo_login.checkcode .checkcode_img { display: inline-block;}
+.app_sdo_login.checkcode .checkcode_img img { width: 105px; border: 1px #dad0ca solid; vertical-align: middle;}
+.app_sdo_login.checkcode .input_label { margin-right: 10px}
+.app_sdo_login.checkcode .checkcode_change { margin-left: 10px; line-height: 54px;}
+.app_sdo_login.checkcode .input_cur input.text { background-position: right -111px;}
+.app_sdo_login.checkcode .tbody#tbody_btn { display: block;}
+.app_sdo_login.checkcode .tbody#tbody_btn .tr { display: block; padding-bottom: 0;}
+.app_sdo_login.checkcode .login_frame #login_btn .td { width: 178px; padding-left: 92px;}
+.app_sdo_login.checkcode .login_frame .login_btn { float: left; width: auto; padding-left: 0; padding-top: 18px;}
+.app_sdo_login.checkcode .login_frame a.btn_user_login { float: left; width: 115px; padding-left: 70px;}
+.app_sdo_login.checkcode .login_frame a.btn_user_login span.btn_user_login_index { display: block; padding-right: 70px;}
+.app_sdo_login.checkcode .login_frame .cancel_btn { display: block; width: 30px; float: right; padding-top: 18px;}
+.app_sdo_login.checkcode .reg_guide { display: none;}
+
+/* A8密保 */
+.app_sdo_login.safe_code_a8 .login_frame { width: 260px; margin-top: 31px;}
+.app_sdo_login.safe_code_a8 .login_frame .form_tips_outer { margin-bottom: 8px;}
+.app_sdo_login.safe_code_a8 .nav { display: none;}
+.app_sdo_login.safe_code_a8 .tbody#tbody_safe_code_a8 { display: block;}
+.app_sdo_login.safe_code_a8 #safe_code_a8_input { display: block;} 
+.app_sdo_login.safe_code_a8 #safe_code_a8_input .safeCodeTips { display: inline-block; padding-bottom: 25px; line-height: 18px; text-align: left;}
+.app_sdo_login.safe_code_a8 #safe_code_a8_input .safeCodeTips .tzcode { font-family: Arial; font-size: 20px; font-weight: 700; color: #cf2c1c;}
+.app_sdo_login.safe_code_a8 .tbody#tbody_btn { display: block;}
+.app_sdo_login.safe_code_a8 .tbody#tbody_btn .tr { display: block;}
+.app_sdo_login.safe_code_a8 .login_frame #login_btn .td { width: 240px;}
+.app_sdo_login.safe_code_a8 .login_frame .login_btn { float: left; width: auto; padding-left: 0; padding-top: 23px;}
+.app_sdo_login.safe_code_a8 .login_frame a.btn_user_login { float: left; width: 115px; padding-left: 70px;}
+.app_sdo_login.safe_code_a8 .login_frame a.btn_user_login span.btn_user_login_index { display: block; padding-right: 70px;}
+.app_sdo_login.safe_code_a8 .login_frame .cancel_btn { display: block; padding: 23px 10px 0 0;}
+.app_sdo_login.safe_code_a8 .reg_guide { display: none;}
+
+/* A6密保 */
+.app_sdo_login.safe_code_a6 .login_frame { width: 260px; margin-top: 31px;}
+.app_sdo_login.safe_code_a6 .login_frame .form_tips_outer { margin-bottom: 8px;}
+.app_sdo_login.safe_code_a6 .nav { display: none;}
+.app_sdo_login.safe_code_a6 .tbody#tbody_safe_code_card { margin: 0 auto; display: block;}
+.app_sdo_login.safe_code_a6 .tbody#tbody_safe_code_a6 { display: block;}
+.app_sdo_login.safe_code_a6 #safe_code_a6_input { display: block;}
+.app_sdo_login.safe_code_a6 .safeCodeTips { padding-bottom: 12px;}
+.app_sdo_login.safe_code_a6 .login_frame .safeCodeList li { width: 58px; margin: 0 3px;}
+.app_sdo_login.safe_code_a6 .login_frame .safeCodeList .cell_input { width: 44px;}
+.app_sdo_login.safe_code_a6 .login_frame .safeCodeList input.text { width: 44px; background-position: -56px -40px;}
+.app_sdo_login.safe_code_a6 .login_frame .safeCodeList li.cur input.text { background-position: -156px -40px;}
+.app_sdo_login.safe_code_a6 .tbody#tbody_btn { display: block;}
+.app_sdo_login.safe_code_a6 .tbody#tbody_btn .tr { display: block;}
+.app_sdo_login.safe_code_a6 .login_frame #login_btn .td { width: 240px;}
+.app_sdo_login.safe_code_a6 .login_frame .login_btn { float: left; width: auto; padding-left: 0; padding-top: 22px;}
+.app_sdo_login.safe_code_a6 .login_frame a.btn_user_login { float: left; width: 115px; padding-left: 70px;}
+.app_sdo_login.safe_code_a6 .login_frame a.btn_user_login span.btn_user_login_index { display: block; padding-right: 70px;}
+.app_sdo_login.safe_code_a6 .login_frame .cancel_btn { display: block; padding: 23px 12px 0 0;}
+.app_sdo_login.safe_code_a6 .reg_guide { display: none;}
+
+/* 安全卡 */
+.app_sdo_login.safe_code_card .login_frame { width: 260px; margin-top: 31px;}
+.app_sdo_login.safe_code_card .login_frame .form_tips_outer { margin-bottom: 8px;}
+.app_sdo_login.safe_code_card .nav { display: none;}
+.app_sdo_login.safe_code_card .tbody#tbody_safe_code_card { margin: 0 auto; display: block; text-align: left;}
+.app_sdo_login.safe_code_card #safe_code_code_input { display: block;}
+.app_sdo_login.safe_code_card .safeCodeList { text-align: center;}
+.app_sdo_login.safe_code_card .safeCodeTips { padding-bottom: 12px;}
+.app_sdo_login.safe_code_card .safeCodeTips .strong { font-size: 14px;}
+.app_sdo_login.safe_code_card .safeCodeTipsB { margin-top: 20px; overflow: hidden; line-height: 18px; font-size: 14px;}
+.app_sdo_login.safe_code_card .login_frame .safeCodeList li { margin: 0 5px; font-family: "Arail"; font-size: 14px; font-weight: bold; letter-spacing: 1px;}
+.app_sdo_login.safe_code_card .tbody#tbody_btn { display: block;}
+.app_sdo_login.safe_code_card .tbody#tbody_btn .tr { display: block;}
+.app_sdo_login.safe_code_card .login_frame #login_btn .td { width: 240px;}
+.app_sdo_login.safe_code_card .login_frame .login_btn { float: left; width: auto; padding-left: 0; padding-top: 10px;}
+.app_sdo_login.safe_code_card .login_frame a.btn_user_login { float: left; width: 115px; padding-left: 70px;}
+.app_sdo_login.safe_code_card .login_frame a.btn_user_login span.btn_user_login_index { display: block; padding-right: 70px;}
+.app_sdo_login.safe_code_card .login_frame .cancel_btn { display: block; padding: 10px 16px 0 0;}
+.app_sdo_login.safe_code_card .reg_guide { display: none;}
+
+/* 防沉迷 */
+.login_fcm { display: none;}
+.login_fcm p { padding: 0 3px; line-height: 18px; color: #666666; text-align: left;}
+.fcm_tips { display: inline-block; width: auto; padding: 0 10px 0 30px; line-height: 28px; background-position: 4px -368px; background-color: #4d4d4d; color: #ffffff; text-align: left;}
+.fcm_form { width: 350px; margin: 0 auto;}
+.fcm_form .input_wrap { width: 100%; margin-bottom: 10px; overflow: hidden;}
+.fcm_form label { float: left; font-size: 14px; line-height: 43px;}
+.fcm_form .cell_input { float: left; width: 255px; margin-left: 10px; background-position: left -81px;}
+.fcm_form .cell_input input.text { width: 235px; height: 24px; padding: 10px; line-height: 25px; background-color: transparent; border: none; font: 700 16px/24px verdana;}
+.fcm_form .cell_input.input_cur { background-position: right -81px;}
+.fcm_form .input_wrap .status { display: none; float: left; width: 12px; height: 12px; vertical-align: middle; margin: 16px 0 0 10px;}
+.fcm_form .input_wrap .status.suc { display: inline-block; background-position: right -118px;}
+.fcm_form .input_wrap .status.error { display: inline-block; background-position: right -140px;}
+.fcm_form .control { float: left; width: 255px; margin-left: 65px; text-align: left; overflow: hidden;}
+.fcm_form .btn_fcm_submit { float: left; display: block; width: 115px; padding-left: 70px;}
+.fcm_form .btn_fcm_submit span { display: block; padding-right: 70px;}
+.fcm_form .cancel_btn { float: right; font-size: 14px; line-height: 43px;}
+.app_sdo_login.fcm .login_body { display: none;}
+.app_sdo_login.fcm .login_fcm { display: block;}

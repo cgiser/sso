@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="GB2312"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<!-- @version $Id$ -->
+<!--
+  - Log4j配置文件。
+-->
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+	<!-- ===================================================================== -->
+	<!-- Appenders                                                             -->
+	<!-- ===================================================================== -->
+	<!-- ===== [公共Appender] ===== -->
+	<!-- [公共Appender] 默认 -->
+	<appender name="DEFAULT-APPENDER" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="file" value="${loggingRoot}/common-default.log"/>
+		<param name="append" value="true"/>
+		<param name="encoding" value="GBK"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p %c{2} - %m%n"/>
+		</layout>
+	</appender>
+	<!-- [公共Appender] 汇总错误 -->
+	<appender name="ERROR-APPENDER" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="file" value="${loggingRoot}/common-error.log"/>
+		<param name="append" value="true"/>
+		<param name="encoding" value="GBK"/>
+		<param name="threshold" value="error"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p %c{2} - %m%n"/>
+		</layout>
+	</appender>
+	<!-- [公共Appender] 汇总性能统计 -->
+	<appender name="PERF-APPENDER" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="file" value="${loggingRoot}/common-perf.log"/>
+		<param name="append" value="true"/>
+		<param name="encoding" value="GBK"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p %c{2} - %m%n"/>
+		</layout>
+	</appender>
+	<!-- [公共Appender] 控制台STDOUT -->
+	<appender name="STDOUT-APPENDER" class="org.apache.log4j.ConsoleAppender">
+		<param name="encoding" value="GBK"/>
+		<param name="target" value="System.out"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%-5p %c{2} - %m%n"/>
+		</layout>
+	</appender>
+	<!-- [公共Appender] 控制台STDERR -->
+	<appender name="STDERR-APPENDER" class="org.apache.log4j.ConsoleAppender">
+		<param name="encoding" value="GBK"/>
+		<param name="target" value="System.err"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%-5p %c{2} - %m%n"/>
+		</layout>
+	</appender>
+	<!-- [公共Appender] 空 -->
+	<appender name="NULL-APPENDER" class="org.apache.log4j.varia.NullAppender"/>
+	<!-- [公共Appender] Jakarta commons -->
+	<appender name="APACHE-APPENDER" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="file" value="${loggingRoot}/common-apache.log"/>
+		<param name="append" value="true"/>
+		<param name="encoding" value="GBK"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p %c{2} - %m%n"/>
+		</layout>
+	</appender>
+	<!-- [公共Appender] 数据访问层 -->
+	<appender name="DAO-APPENDER" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="file" value="${loggingRoot}/common-dao.log"/>
+		<param name="append" value="true"/>
+		<param name="encoding" value="GBK"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p %c{2} - %m%n"/>
+		</layout>
+	</appender>
+	<!-- ===== [框架Appender] ===== -->
+	<!-- [框架Appender] USFP 基础设施 - 默认 -->
+	<appender name="USFP-DEFAULT-APPENDER" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="file" value="${loggingRoot}/usfp-default.log"/>
+		<param name="append" value="true"/>
+		<param name="encoding" value="GBK"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p %c{2} - %m%n"/>
+		</layout>
+	</appender>
+	<!-- ===== [应用Appender] ===== -->
+	<!-- [应用Appender] 默认 -->
+	<appender name="SSO-DEFAULT-APPENDER" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="file" value="${loggingRoot}/user-defined/sso-default.log"/>
+		<param name="append" value="true"/>
+		<param name="encoding" value="GBK"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p %c{2} - %m%n"/>
+		</layout>
+	</appender>
+	
+	<!-- [应用Appender] 应用业务处理结果日志 -->
+	<appender name="SSO-BUSINESS-RESULT-APPENDER" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="file" value="${loggingRoot}/user-defined/sso-biz-result.log"/>
+		<param name="append" value="true"/>
+		<param name="encoding" value="GBK"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p - %m%n"/>
+		</layout>
+	</appender>
+	<!--联盟日志信息-->
+	<appender name="SSO-BUSINESS-UNION-RESULT-APPENDER" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="file" value="${loggingRoot}/user-defined/sso-biz-union-result.log"/>
+		<param name="append" value="true"/>
+		<param name="encoding" value="GBK"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p - %m%n"/>
+		</layout>
+	</appender>
+	
+	<!-- SSO info 日志 -->
+	<appender name="SSO-INFO-RESULT-APPENDER" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="file" value="${loggingRoot}/user-defined/sso-info-result.log"/>
+		<param name="append" value="true"/>
+		<param name="encoding" value="GBK"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p - %m%n"/>
+		</layout>
+	</appender>
+	<!--TICKET-->
+	<appender name="SSO-TICKET-RESULT-APPENDER" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="file" value="${loggingRoot}/user-defined/sso-ticket-result.log"/>
+		<param name="append" value="true"/>
+		<param name="encoding" value="GBK"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p - %m%n"/>
+		</layout>
+	</appender>
+	<!-- SSO 性能日志 -->
+	<appender name="SSO-PERFORMANCE-RESULT-APPENDER" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="file" value="${loggingRoot}/user-defined/sso-performance-result.log"/>
+		<param name="append" value="true"/>
+		<param name="encoding" value="GBK"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p - %m%n"/>
+		</layout>
+	</appender>
+	<!-- SSO 移动平台日志 -->
+	<appender name="SSO-MOBILE-RESULT-APPENDER" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="file" value="${loggingRoot}/user-defined/sso-mobile-result.log"/>
+		<param name="append" value="true"/>
+		<param name="encoding" value="GBK"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p - %m%n"/>
+		</layout>
+	</appender>
+	
+	<!-- ===================================================================== -->
+	<!-- Loggers                                                               -->
+	<!-- ===================================================================== -->
+	<!-- ===== [公共Logger] ===== -->
+	<!-- [公共Logger] 性能 - URL性能  -->
+	<logger name="com.hudong.keel.web.filter.PerformanceMonitorFilter" additivity="false">
+		<level value="INFO"/>
+		<appender-ref ref="PERF-APPENDER"/>
+	</logger>
+	<!-- [公共Logger] 控制台STDOUT - STDOUT -->
+	<logger name="STDOUT" additivity="false">
+		<level value="INFO"/>
+		<appender-ref ref="STDOUT-APPENDER"/>
+	</logger>
+	<!-- [公共Logger] 控制台STDERR - STDERR -->
+	<logger name="STDERR" additivity="false">
+		<level value="${sso_loggingLevel}"/>
+		<appender-ref ref="STDERR-APPENDER"/>
+	</logger>
+	<!-- ===== [框架Logger] ===== -->
+	<!-- [框架Logger] Jakarta commons - 默认 -->
+	<logger name="org.apache" additivity="false">
+		<level value="${sso_loggingLevel}"/>
+		<appender-ref ref="APACHE-APPENDER"/>
+		<appender-ref ref="ERROR-APPENDER"/>
+	</logger>
+	<!-- [框架Logger] Jakarta commons - beanutils -->
+	<logger name="org.apache.commons.beanutils">
+		<level value="ERROR"/>
+		<appender-ref ref="APACHE-APPENDER"/>
+		<appender-ref ref="ERROR-APPENDER"/>
+	</logger>
+	<!-- [框架Logger] 数据访问层 - Ibatis -->
+	<logger name="com.ibatis" additivity="false">
+		<level value="${sso_loggingLevel}"/>
+		<appender-ref ref="DAO-APPENDER"/>
+		<appender-ref ref="ERROR-APPENDER"/>
+	</logger>
+	<!-- [框架Logger] 数据访问层 - SQL -->
+	<logger name="java.sql" additivity="false">
+		<level value="${sso_loggingLevel}"/>
+		<appender-ref ref="DAO-APPENDER"/>
+		<appender-ref ref="ERROR-APPENDER"/>
+	</logger>
+	<!-- [框架Logger] USFP 基础设施层 - 默认日志 -->
+	<logger name="com.hudong.core.common" additivity="false">
+		<level value="${sso_loggingLevel}"/>
+		<appender-ref ref="USFP-DEFAULT-APPENDER"/>
+		<appender-ref ref="ERROR-APPENDER"/>
+	</logger>
+	<!-- ===== [应用Logger] ===== -->
+	<logger name="com.hudong.keel" additivity="false">
+		<level value="${sso_loggingLevel}"/>
+		<appender-ref ref="USFP-DEFAULT-APPENDER"/>
+		<appender-ref ref="ERROR-APPENDER"/>
+	</logger>
+	<logger name="com.hoodong" additivity="false">
+		<level value="${sso_loggingLevel}"/>
+		<appender-ref ref="ERROR-APPENDER"/>
+	</logger>
+	<!-- [应用Logger] 资源仓库核心 - 业务结果日志 -->
+	<logger name="BUSINESS.SSO" additivity="false">
+		<level value="INFO"/>
+		<appender-ref ref="SSO-BUSINESS-RESULT-APPENDER"/>
+	</logger>
+	<!--联盟日志-->
+	<logger name="BUSINESS.SSO.UNION" additivity="false">
+		<level value="INFO"/>
+		<appender-ref ref="SSO-BUSINESS-UNION-RESULT-APPENDER"/>
+	</logger>
+	<!-- [应用Logger] SSO-info -->
+	<logger name="SSO.INFO" additivity="false">
+		<level value="INFO"/>
+		<appender-ref ref="SSO-INFO-RESULT-APPENDER"/>
+	</logger>
+	<!-- for ticket -->
+	<logger name="SSO.TICKET.INFO" additivity="false">
+		<level value="INFO"/>
+		<appender-ref ref="SSO-TICKET-RESULT-APPENDER"/>
+	</logger>
+	<!-- [应用Logger] SSO-PERFORMANCE -->
+	<logger name="SSO.PERFORMANCE" additivity="false">
+		<level value="INFO"/>
+		<appender-ref ref="SSO-PERFORMANCE-RESULT-APPENDER"/>
+	</logger>
+	<!-- [应用Logger] SSO-MOBILE -->
+	<logger name="com.hudong.sso.action.mobile" additivity="false">
+		<level value="INFO"/>
+		<appender-ref ref="SSO-MOBILE-RESULT-APPENDER"/>
+	</logger>
+	<!-- [应用Logger] Memcache -->
+	<logger name="com.danga">
+		<level value="WARN"/>
+		<appender-ref ref="DEFAULT-APPENDER"/>
+		<appender-ref ref="ERROR-APPENDER"/>
+	</logger>
+	
+	<!-- ===================================================================== -->
+	<!-- Root logger                                                           -->
+	<!-- ===================================================================== -->
+	<root>
+		<level value="${sso_loggingLevel}"/>
+		<appender-ref ref="DEFAULT-APPENDER"/>
+		<appender-ref ref="ERROR-APPENDER"/>
+	</root>
+</log4j:configuration>

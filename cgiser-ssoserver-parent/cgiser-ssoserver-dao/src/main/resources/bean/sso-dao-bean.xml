@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="GBK"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+         http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi.xsd"
+	default-autowire="byName">
+	<!--
+		========================================================================
+	-->
+	<!--
+		DAO定义。
+	-->
+	<!--
+		========================================================================
+	-->
+	<bean id="userDao" class="com.cgiser.sso.dao.UserDao" />
+	<bean id="deviceDao" class="com.cgiser.sso.dao.DeviceDao" />
+	<bean id="gameDao" class="com.cgiser.sso.dao.GameDao" />
+	<bean id="deviceGameDao" class="com.cgiser.sso.dao.DeviceGameDao" />
+	<bean id="activeDao" class="com.cgiser.sso.dao.ActiveDao" />
+</beans>

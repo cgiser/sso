@@ -1,0 +1,57 @@
+@charset "utf-8";
+/* CSS Document */
+/*-------------reset------------*/
+html{color:#2b2b2b;background:#fff;}
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,fieldset,lengend,button,input,textarea,form,th,td,div{margin:0;padding:0;}
+body,button,input,select,textarea{font:12px Tahoma,Helvetica,Arial,"\5b8b\4f53",sans-serif; line-height:1;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+address,cite,dfn,em,var{font-style:normal;}
+code,kbd,pre,samp,tt{font-family:"Courier New",Courier,monospace;}
+small{font-size:12px;}
+ul,ol{list-style:none;}
+a{text-decoration:none; line-height:1.04; color:#2279d4;}
+a:hover{text-decoration:underline;}
+abbr[title],acronym[title]{border-bottom:1px dotted;cursor:help;}
+q:before,q:after{content:'';}
+legend{color:#666666;}
+fieldset,img{border:none;}
+button,input,select,textarea{font-size:100%;}
+table{border-collapse:collapse;border-spacing:0;}
+img{ -ms-interpolation-mode: bicubic}
+html,body {width:100%;height:100%;}
+/*-------------end reset------------
+.wrapper { width:960px; margin:0 auto; font-family:microsoft yahei;color:#898989; }
+a { line-height:1.2;}
+.header { height:70px;}
+.header .logo { margin-left:85px;}
+.footer {border-top:1px solid #e2e2e2; text-align:center; font-family:SimSun; }
+.footer p { margin:15px 0;}
+.main { position:relative;}
+.main .banner {height:470px;}
+.main .banner iframe { height:470px;width:960px;}
+.main .loginbox { position:absolute;top:55px;left:600px; width:270px;
+background:url(../images/LoginSDO/bg_login_24.png) no-repeat;_background:url(../images/LoginSDO/bg_login_8.png) no-repeat; padding:6px 10px 10px;
+/*border:1px solid #c2c2c2;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;-moz-box-shadow:0 0 5px #666;background:url(../images/bg_login_title.jpg) repeat-x;
+}
+.main .loginbox .out { }
+.main .loginbox .title {-moz-border-radius:5px 5px 0 0;
+
+zoom:1;border-bottom:1px solid #dbd9d9; margin:0 10px;}
+.main .loginbox .title:after{ display:block; clear:both; content:""; height:0; visibility:hidden;}
+.main .loginbox .title a { float:right; margin-top:15px;font-family:SimSun;}
+.main .loginbox h2 { float:left;}
+.main .loginbox .center {height:214px; width:228px; margin:45px 0 0px 25px; overflow:hidden; }
+.main .loginbox .center iframe { height:214px; margin-top:-30px; margin-left:-3px; width:228px;}
+.main .loginbox .bottom { background:url(../images/LoginSDO/line_dash.gif) repeat-x;margin:0 10px;height:50px; line-height:50px; font-size:14px; text-align:center;}
+ */
+.wrapper { width:960px; margin:0 auto; font-family:microsoft yahei;color:#898989; }
+a { line-height:1.2;}
+.header { height:70px;}
+.header .logo { margin-left:85px;}
+.footer {border-top:1px solid #e2e2e2; text-align:center; font-family:SimSun; }
+.footer p { margin:15px 0;}
+.main { position:relative; height: 470px;}
+.main .banner {height:470px; position: absolute; left: -100px;}
+.main .banner iframe { height:470px;width:960px;}
+.main .loginbox { position:absolute;top:55px;left:490px; width:470px; height: 340px;}
+.main .loginbox iframe { width:470px; height: 340px;}

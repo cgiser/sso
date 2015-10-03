@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+			http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd"
+	default-autowire="byName"><!--
+
+	<bean id="memCachedManager"
+		class="com.cgiser.core.common.cache.mem.xmemcached.XMemcachedClientFactoryBean">
+		<property name="servers" value="192.168.2.10:11211" />
+		<property name="weights" value="1000" />
+	</bean>
+	--><bean id="emailManager"
+		class="com.cgiser.sso.manager.impl.EmailManagerImpl">
+		<property name="user" value="cgiser@cgiser.com" />
+		<property name="pwd" value="yh13739641298" />
+		<property name="host" value="smtp.exmail.qq.com" />
+		<property name="from" value="cgiser@cgiser.com" />
+	</bean>
+	<bean id="nineOneSdk" class="com.cgiser.sso.support.NineOneSdk" >
+		<property name="appid" value="${appid}" />
+		<property name="appkey" value="${appkey}" />
+	</bean>
+	<bean id="wdjSdk" class="com.cgiser.sso.support.WdjSdk" />
+	<bean id="userManager" class="com.cgiser.sso.manager.impl.UserManagerImpl" />
+	<bean id="deviceManager" class="com.cgiser.sso.manager.impl.DeviceMangerImpl" />
+	<bean id="gameManager" class="com.cgiser.sso.manager.impl.GameManagerImpl" />
+	<bean id="deviceGameManager" class="com.cgiser.sso.manager.impl.DeviceGameManagerImpl" />
+	<bean class="org.springframework.remoting.rmi.RmiServiceExporter">
+		<property name="serviceName" value="deviceGameManager"/>
+		<property name="service" ref="deviceGameManager"/>
+		<property name="serviceInterface" value="com.cgiser.sso.manager.DeviceGameManager"/>
+		<!-- defaults to 1099 -->
+		<property name="registryPort" value="${sso.service.rmi.port}" />
+	</bean>
+	<bean class="org.springframework.remoting.rmi.RmiServiceExporter">
+		<property name="serviceName" value="userManager"/>
+		<property name="service" ref="userManager"/>
+		<property name="serviceInterface" value="com.cgiser.sso.manager.UserManager"/>
+		<!-- defaults to 1099 -->
+		<property name="registryPort" value="${sso.service.rmi.port}" />
+	</bean>
+</beans>

@@ -3,3 +3,9 @@
 
 # Packaging
 .cask
+
+.classpath
+.project
+target
+.settings
+bin

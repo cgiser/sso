@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources />
+	<!-- Form beans .test --><!--
+	<form-beans>
+		<form-bean name="autoLoginActionForm"
+			type="com.hudong.sso.action.mobile.model.AutoLoginActionForm" />
+		<form-bean name="loginActionForm"
+			type="com.hudong.sso.action.mobile.model.LoginActionForm" />
+		<form-bean name="logoutActionForm"
+			type="com.hudong.sso.action.mobile.model.LogoutActionForm" />
+		<form-bean name="registerAndLoginActionForm"
+			type="com.hudong.sso.action.mobile.model.RegisterAndLoginActionForm" />
+		<form-bean name="connectLoginActionForm"
+			type="com.hudong.sso.action.mobile.model.ConnectLoginActionForm" />
+		<form-bean name="connectRegisterAndLoginActionForm"
+			type="com.hudong.sso.action.mobile.model.ConnectRegisterAndLoginActionForm" />
+		<form-bean name="connectBindActionForm"
+			type="com.hudong.sso.action.mobile.model.ConnectBindActionForm" />
+		<form-bean name="capchaActionForm"
+			type="com.hudong.sso.action.mobile.model.CapchaActionForm" />
+		<form-bean name="getPasswordActionForm"
+			type="com.hudong.sso.action.mobile.model.GetPasswordActionForm" />
+	</form-beans>
+	--><!-- Global forward -->
+
+	<global-forwards>
+		<forward name="xbk.error.operation" path="/error/xbk_opt_error.jsp" />
+		<forward name="error.operation" path="/error/opt_error.jsp" />
+	</global-forwards>
+
+	<!-- -->
+	<action-mappings>
+		<!-- 登陆 -->
+		<action path="/login" validate="false" parameter="method"
+			type="com.cgiser.sso.action.LoginAction" scope="request">
+		</action>
+		<action path="/mmlogin" validate="false" parameter="method"
+			type="com.cgiser.sso.action.MMLoginAction" scope="request">
+		</action>
+		<action path="/weblogin" validate="false" parameter="method"
+			type="com.cgiser.sso.action.WebLoginAction" scope="request">
+			<forward name="login" path="/login.jsp" />
+			<forward name="user" path="/user.jsp" />
+		</action>
+		<action path="/logout" validate="false" parameter="method"
+			type="com.cgiser.sso.action.LogoutAction" scope="request">
+			<forward name="login" path="/login.jsp" />
+		</action>
+		<action path="/register" validate="false" parameter="method"
+			type="com.cgiser.sso.action.RegisterAction" scope="request">
+		</action>
+		<action path="/active" validate="false" parameter="method"
+			type="com.cgiser.sso.action.ActiveAction" scope="request">
+		</action>
+		<action path="/getUdid" validate="false" parameter="method"
+			type="com.cgiser.sso.action.GetUuidAction" scope="request">
+		</action>
+		<action path="/bindEmail" validate="false" parameter="method"
+			type="com.cgiser.sso.action.BindEmailAction" scope="request">
+		</action>
+		<action path="/activeLogonId" validate="false" parameter="method"
+			type="com.cgiser.sso.action.ActiveLogonIdAction" scope="request">
+		</action>
+		<action path="/getPassword" validate="false" parameter="method"
+			type="com.cgiser.sso.action.GetPasswordAction" scope="request">
+		</action>
+		<action path="/resetPassword" validate="false" parameter="method"
+			type="com.cgiser.sso.action.ResetPassWordAction" scope="request">
+		</action>
+		<action path="/getGameInfoByGameIden" validate="false" parameter="method"
+			type="com.cgiser.sso.action.GetGameServerByGameIden" scope="request">
+		</action>
+	</action-mappings>
+	<!-- Message Resources -->
+	<message-resources parameter="application" />
+</struts-config>

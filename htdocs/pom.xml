@@ -1,0 +1,42 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.cgiser</groupId>
+	<artifactId>cgiser-ssoserver-htdocs</artifactId>
+	<packaging>war</packaging>
+	<version>${ssoserver.htdocs.version}</version>
+	<name>ssoserver Webapp</name>
+
+	<parent>
+		<artifactId>cgiser-parent</artifactId>
+		<groupId>com.cgiser</groupId>
+		<version>1.0</version>
+	</parent>
+
+	<dependencies>
+		<!-- project jars -->
+		<dependency>
+			<groupId>com.cgiser</groupId>
+			<artifactId>cgiser-app</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.cgiser</groupId>
+			<artifactId>cgiser-ssoserver-web</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.cgiser</groupId>
+			<artifactId>cgiser-ssoserver-biz</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.cgiser</groupId>
+			<artifactId>cgiser-ssoserver-dao</artifactId>
+			<version>1.0</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<finalName>release</finalName>
+	</build>
+</project>
